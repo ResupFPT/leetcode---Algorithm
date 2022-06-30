@@ -1,2 +1,3 @@
 # leetcode---Algorithm
-This is a place to push solution of code in leetcode. You are welcome to join in.
+This is place to push soution in tag Array, The number in folder is a ID of exercise in leetCode, you can type ID in there to see the exercise
+
