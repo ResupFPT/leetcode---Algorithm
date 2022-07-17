@@ -6,6 +6,8 @@ import java.util.Map;
 
 class solution1{
     /**
+     * Difficult : MEDIUM
+     * 
      * The idea for this solution is, I use hashMap to store character with the value if frequency in String and 
      * that sort hashMap by the key to pick smallest character with the value of it.
      * 
