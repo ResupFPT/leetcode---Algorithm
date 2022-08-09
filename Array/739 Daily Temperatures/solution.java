@@ -1,8 +1,16 @@
 import java.util.Stack;
 
+<<<<<<< HEAD
+=======
+//medium solution
+//The idea it we push the next day into the stack and use it that a storage to know what is the next day is wammer of this current day
+
+>>>>>>> 3730f4d23a1c721d5bc4fbd6168928709c5f54c1
 public class solution {
 
     //this solution have time complexity O(n^2)
+    //Idea is in each loop we will loop to find the next day that wammer, if we find is so size of stack is the day we need to wait
+    //But this is not good for the big array because we need to loop to much in each loop.
     public static int[] dailyTemperatures(int[] temperatures) {
         Stack<Integer> tempStack = new Stack<Integer>();
         int[] answer = new int[temperatures.length];
@@ -28,6 +36,8 @@ public class solution {
     }
 
     //this solution have time complexity is O(n)
+    //Idea is about we use stack to keep the index of temperature, each loop we will push index into array 
+    //and if we find the day that index of top stack of temperature smaller so we will have the day we wait is index of current day - stack.pop()
     public static int[] dailyTemperatures2(int[] temperatures) {
         int n = temperatures.length;
         int[] answer = new int[n];
