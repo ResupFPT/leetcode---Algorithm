@@ -1,11 +1,8 @@
 import java.util.Stack;
 
-<<<<<<< HEAD
-=======
 //medium solution
 //The idea it we push the next day into the stack and use it that a storage to know what is the next day is wammer of this current day
 
->>>>>>> 3730f4d23a1c721d5bc4fbd6168928709c5f54c1
 public class solution {
 
     //this solution have time complexity O(n^2)
