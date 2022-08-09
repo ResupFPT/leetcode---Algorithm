@@ -1,29 +1,13 @@
 import java.util.Stack;
 
 //medium solution
-
-// public int[] dailyTemperatures(int[] temperatures) {
-//     int n = temperatures.length;
-//     int[] answer = new int[n];
-//     //create stack store index of each temperatures in array
-//     Deque<Integer> stack = new ArrayDeque<>();
-
-//     for(int currDay = 0; currDay < n; currDay++ ){
-//         int currentTemp = temperatures[currDay];
-//         while(!stack.isEmpty() && temperatures[stack.peek()] < currentTemp){
-//             int preDay = stack.pop();
-//             answer[preDay] = currDay - preDay;
-//         }
-
-//         stack.push(currDay);
-//     }
-
-//     return answer;
-// }
+//The idea it we push the next day into the stack and use it that a storage to know what is the next day is wammer of this current day
 
 public class solution {
 
     //this solution have time complexity O(n^2)
+    //Idea is in each loop we will loop to find the next day that wammer, if we find is so size of stack is the day we need to wait
+    //But this is not good for the big array because we need to loop to much in each loop.
     public static int[] dailyTemperatures(int[] temperatures) {
         Stack<Integer> tempStack = new Stack<Integer>();
         int[] answer = new int[temperatures.length];
@@ -49,6 +33,8 @@ public class solution {
     }
 
     //this solution have time complexity is O(n)
+    //Idea is about we use stack to keep the index of temperature, each loop we will push index into array 
+    //and if we find the day that index of top stack of temperature smaller so we will have the day we wait is index of current day - stack.pop()
     public static int[] dailyTemperatures2(int[] temperatures) {
         int n = temperatures.length;
         int[] answer = new int[n];
