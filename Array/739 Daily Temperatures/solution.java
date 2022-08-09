@@ -1,26 +1,5 @@
 import java.util.Stack;
 
-//medium solution
-
-// public int[] dailyTemperatures(int[] temperatures) {
-//     int n = temperatures.length;
-//     int[] answer = new int[n];
-//     //create stack store index of each temperatures in array
-//     Deque<Integer> stack = new ArrayDeque<>();
-
-//     for(int currDay = 0; currDay < n; currDay++ ){
-//         int currentTemp = temperatures[currDay];
-//         while(!stack.isEmpty() && temperatures[stack.peek()] < currentTemp){
-//             int preDay = stack.pop();
-//             answer[preDay] = currDay - preDay;
-//         }
-
-//         stack.push(currDay);
-//     }
-
-//     return answer;
-// }
-
 public class solution {
 
     //this solution have time complexity O(n^2)
