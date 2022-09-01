@@ -42,7 +42,7 @@ class solution {
      * To understand more solution to, please go to folder Hash Table and Find
      * Folder 70 Climbing Stairs
      * We will keep the link to go Hash Table Folder here:
-     * https://github.com/ResupFPT/leetcode---Algorithm/tree/main/Hash%20Table/Design%20Hash%20Table
+     * https://github.com/ResupFPT/leetcode---Algorithm/tree/main/Hash%20Table/70%20Climbing%20Stairs
      */
 
     // Dynamic Progamming Solution
