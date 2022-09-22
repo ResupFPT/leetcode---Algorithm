@@ -23,6 +23,7 @@ we have dp is
     0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
 
 if j = i so is mean we are evaluate just one point, that is the * I present in matrix below
+  
     * | 0 | 0 | 0 | 0 | 0 | 0 | 0
     0 | * | 0 | 0 | 0 | 0 | 0 | 0
     0 | 0 | * | 0 | 0 | 0 | 0 | 0
@@ -31,9 +32,11 @@ if j = i so is mean we are evaluate just one point, that is the * I present in m
     0 | 0 | 0 | 0 | 0 | * | 0 | 0
     0 | 0 | 0 | 0 | 0 | 0 | * | 0
     0 | 0 | 0 | 0 | 0 | 0 | 0 | *
+
 that is not the form of triangle 
 
 if j = i+1 is mean we proccess just a single line, that is the @ I present in maxtrix below
+   
     * | @ | 0 | 0 | 0 | 0 | 0 | 0
     0 | * | @ | 0 | 0 | 0 | 0 | 0
     0 | 0 | * | @ | 0 | 0 | 0 | 0
@@ -42,6 +45,7 @@ if j = i+1 is mean we proccess just a single line, that is the @ I present in ma
     0 | 0 | 0 | 0 | 0 | * | @ | 0
     0 | 0 | 0 | 0 | 0 | 0 | * | @
     0 | 0 | 0 | 0 | 0 | 0 | 0 | *
+
 that is not the form of triangle 
 
 So if j = i+2 we can form is to triangle, but we fix i is the point and j is dynamic point depend on i so j must to be greater than i is mean that we just process the sub matrix above the '@' character. To present that is ALL 0 in matrix below
