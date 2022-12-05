@@ -1,1 +1,0 @@
-Link problem: https://www.spoj.com/problems/ONP/
