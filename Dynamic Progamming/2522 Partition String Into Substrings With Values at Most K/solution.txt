@@ -1,0 +1,55 @@
+Idea:
+So we see that problem we need to solve is find minimum substring in string s and string s can partition
+into many case of substring so we can use Dynamic Progamming in here to solve
+
+We need to change big problem into small problem. In description and some example we can see that
+we can seperate string into substring from left to right, and we need to solve big problem into 
+small string. So the idea is we need to find minimum substring in string range [0...i] (with 0 is first index o string s)
+
+Imagzine: string s: "1242"
+We can solve this int to s' = "1" || "12" || "124" || "1242"
+So in each case we need to find the ans and use that for next case
+
+So we call dp[i] is the minimum substring in ranger [0....i] of string s
+
+we delcare infinitive value: int const inf = 100005 
+	==> Why inf = 100005: we see that the string max lenght is 10^5 so the maximum substring is 10^5
+
+Base value: dp[0] = 1 ( "1" is 1 substring ) and dp[i] = inf;
+
+Result problem: dp[n-1] (n: length of string s)
+
+Dynamic formula:
+	
+	The problem we need to solve is the string range [1...i] so we need to know:
+			+ The curVal at index i
+		if curVal > k so we partition at previos till index i
+		else we can continue to find dp[i+1]
+
+	we loop all element at string s
+		We need to decalre variable curVal:
+			int curVal = 0;
+	
+	int curVal = 0;
+	for(int i=0; i<n; i++){
+		//we stand in f[i] and we calulate for f[i+1]
+		// we need to calculate curValue (int can be the value of [1...i] or the first index of new partition)
+		curVal = curVal * 10 + s[i+1] - '0';
+		if(curVal > k) {
+			// we need to check that the element in s[i+1] is > k or not, if is greater is mean we can not partional because is imposible to seperate one digit to small digit
+			if(s[i+1] - '0' > k) {
+				break;
+			}
+			
+			// so we need to cur partition in index i and open new substring in index i+1
+			f[i+1] = min(f[i+1], f[i] + 1);
+			// and we need to update the curVal for new substring
+			curval = s[i+1] - '0';
+		}else{
+			// we do not open new substring and we just inser s[i+1] into current subString
+			f[i+1] = min(f[i+1], f[i];
+		}
+	}
+
+	if f[n-1] = inf ===> Do not have answer: cout << -1 << endl;
+	otherwise: cout << f[n-1] << endl; 
